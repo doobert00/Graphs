@@ -61,9 +61,15 @@ public class PathSolver<V> {
         }
         return new ArrayList<V>();
     }
-    //TODO: Write Bellamn-Ford Algorithm.
-    public void BellmanFord(){
-
+    //TODO: Write Bellman-Ford Algorithm.
+    public void BellmanFord(Graph<V> G, V start, V end){
+        HashMap<V,Integer> distance = new HashMap<>();
+        HashMap<V,V> predecessor = new HashMap<>();
+        for(V v: G.getVerticies()){
+            distance.put(v,Integer.MAX_VALUE);
+            predecessor.put(v,null);
+        }
+        distance.put(start,0);
     }
     //TODO: Write A* Search Algorithm
     public void AStar(){
