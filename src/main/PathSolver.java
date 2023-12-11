@@ -131,6 +131,7 @@ public class PathSolver<V> {
         HashMap<V,HashMap<V,Integer>> dist = new HashMap<>();
         //Initialize all entries to inf
         for(V v : G.getVerticies()){
+            dist.put(v,new HashMap<V,Integer>());
             for(V u : G.getVerticies()){
                 dist.get(v).put(u,Integer.MAX_VALUE);
             }
