@@ -6,16 +6,7 @@ public class Graph<V> {
     public Graph() {
         this.graph = new HashMap<V, HashMap<V,Integer>>();
     }
-    public int numVerticies(){
-        return this.graph.size();
-    }
-    public int numEdges(){
-        int count = 0;
-        for(V v: this.graph.keySet()){
-            count += this.graph.get(v).keySet().size();
-        }
-        return count;
-    }
+
     public void addVertex(V vertex){
         if(!this.graph.containsKey(vertex)){
             this.graph.put(vertex, new HashMap<V,Integer>());
@@ -40,7 +31,6 @@ public class Graph<V> {
     public Iterable<V> getVerticies(){
         return this.graph.keySet();
     }
-
     public Integer getDistance(V start, V end){
         if(!this.graph.containsKey(start) || !this.graph.containsKey(end)) {
             throw new Error("Invalid nodes not present");
@@ -49,5 +39,15 @@ public class Graph<V> {
             throw new Error("No edge connected the nodes");
         }
         return this.graph.get(start).get(end);
+    }
+    public int numVerticies(){
+        return this.graph.size();
+    }
+    public int numEdges(){
+        int count = 0;
+        for(V v: this.graph.keySet()){
+            count += this.graph.get(v).keySet().size();
+        }
+        return count;
     }
 }
