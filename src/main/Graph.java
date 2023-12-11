@@ -31,7 +31,7 @@ public class Graph<V> {
     public Iterable<V> getVerticies(){
         return this.graph.keySet();
     }
-    public Integer getDistance(V start, V end){
+    public Integer getWeight(V start, V end){
         if(!this.graph.containsKey(start) || !this.graph.containsKey(end)) {
             throw new Error("Invalid nodes not present");
         }
