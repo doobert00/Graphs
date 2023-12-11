@@ -10,7 +10,14 @@ public class PathSolver<V> {
         }
         return instance;
     }
-    //TODO: Write Dijkstra's algorithm.
+
+    /**
+     * An implementation of Dijkstra's shortest path algorithm.
+     * @param G: A weighted & directed graph
+     * @param start: The start vertex
+     * @param end: The end vertex
+     * @return: An iterable of vertices of the shortest path between start and end.
+     */
     public Iterable<V> Dijkstra(Graph<V> G, V start, V end){
         HashMap<V,Integer> distance = new HashMap<>();
         HashMap<V,V> prev = new HashMap<>();
