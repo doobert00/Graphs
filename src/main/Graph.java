@@ -1,15 +1,16 @@
 package main;
 import java.util.*;
 public class Graph<V> {
-    private HashMap<V, HashMap<V, Integer>> graph;
+    //LinkedHashMap will return our keys in a fixed order
+    private LinkedHashMap<V, LinkedHashMap<V, Integer>> graph;
 
     public Graph() {
-        this.graph = new HashMap<V, HashMap<V,Integer>>();
+        this.graph = new LinkedHashMap<V, LinkedHashMap<V,Integer>>();
     }
 
     public void addVertex(V vertex){
         if(!this.graph.containsKey(vertex)){
-            this.graph.put(vertex, new HashMap<V,Integer>());
+            this.graph.put(vertex, new LinkedHashMap<V,Integer>());
         }
     }
     public void addEdge(V start, V end, Integer weight){
