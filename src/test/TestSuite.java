@@ -1,17 +1,21 @@
-package test;
+//package test;
+//
+//import org.junit.runner.RunWith;
+//import org.junit.runners.Suite;
+//
+//@RunWith(Suite.class)
+//@Suite.SuiteClasses(
+//        {
+//                //Doesn't work yet
+//                //test.FloydWarshallTests.class,
+//                test.DijkstraTests.class,
+//                test.BellmanFordTests.class
+//
+//        }
+//)
+//
+//public class TestSuite {
+//}
 
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-
-import main.*;
-
-public class TestSuite{
-    public static void main(String[] args){
-        Result result = JUnitCore.runClasses(PathTests.class);
-        for(Failure failure : result.getFailures()){
-            System.out.println(failure.toString());
-        }
-        System.out.println(result.wasSuccessful());
-    }
-}
+//TODO: At this time gradle is running all tests in the src/test directory. Need to configure to use TestSuite.
+//TODO: Why doesn't it like the package I'm using in the test directory?
