@@ -43,7 +43,7 @@ public class PathTests
         G.addEdge(0,2,1);
         Command<Integer> solver = new FloydWarshall<Integer>();
 //        Iterable<Integer> i =
-        solver.execute(G,0, 2);
+//        solver.execute(G,0, 2);
 //        ArrayList<Integer> output = new ArrayList<Integer>();
 //        ArrayList<Integer> solution = new ArrayList<Integer>(Arrays.asList(0,2));
 //        for(Iterator<Integer> itr = i.iterator(); itr.hasNext();){

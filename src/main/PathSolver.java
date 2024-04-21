@@ -148,7 +148,7 @@ public class PathSolver<V> {
             for(int j = 0; j < G.numVerticies(); j++){
                 for(int k = 1; k < G.numVerticies(); k++){
 //                    if dist[j][k] > dist[j][i] + dist[i][k]
-//                    dist[j][k] ← dist[j][i] + dist[i][k]
+//                    dist[j][k] <-dist[j][i] + dist[i][k]
                     break;
                 }
             }
