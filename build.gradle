@@ -25,13 +25,3 @@ test {
 application {
     mainClass = 'main.Main'
 }
-
-//tasks.named('test') {
-//    useJUnit()
-//    afterTest { desc, result ->
-//        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
-//    }
-////}
-//mainClassName = 'main.java.Main'
-
-// sourceCompatibility = 1.8
